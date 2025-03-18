@@ -14,6 +14,8 @@ body {
     transition: background 0.3s;
     background-color: #030712;
     font-family: "Poppins";
+    cursor: none;
+    overflow: hidden;
 }
 
 .container {
@@ -102,11 +104,15 @@ button {
     transition: width 0.370s, height 0.370s, border 0.370s;
 }
 
-ul li:hover~.cursor {
+body:hover .cursor {
+    opacity: 1;
+}
+
+/* .btnAll:hover body.cursor {
     width: 100px;
     height: 100px;
     border: 2px solid #fff;
-}
+} */
 
 @media (min-width: 600px) {
     .container {
