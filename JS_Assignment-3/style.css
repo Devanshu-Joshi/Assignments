@@ -14,7 +14,6 @@ body {
     transition: background 0.3s;
     background-color: #030712;
     font-family: "Poppins";
-    cursor: none;
     overflow: hidden;
 }
 
@@ -30,6 +29,8 @@ body {
 }
 
 .quote-box {
+    display: flex;
+    flex-direction: column;
     background: #1e1b4b;
     padding: 15px;
     padding-bottom: 40px;
@@ -40,6 +41,11 @@ body {
     filter: drop-shadow(0 0 2px #fff) drop-shadow(0 0 2px #fff);
     margin-top: 10px;
     margin-bottom: 20px;
+}
+
+.quoteAuthor {
+    width: 100%;
+    text-align: end;
 }
 
 .copy-btn {
@@ -65,10 +71,10 @@ body {
 button {
     background: #1e1b4b;
     border: none;
-    padding: 10px;
+    padding: 5px;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 12px;
     border: 1px solid white;
     filter: drop-shadow(0 0 2px #fff) drop-shadow(0 0 2px #fff);
     color: white;
@@ -76,14 +82,16 @@ button {
 }
 
 .shareIcon,
-.exportIcon {
+.exportIcon,
+.refreshIcon {
     position: relative;
     top: 1px;
     font-size: larger;
 }
 
 .btnTwitter,
-.btnExport {
+.btnExport,
+.btnRefresh {
     display: flex;
     align-items: center;
     gap: 5px;
@@ -104,10 +112,6 @@ button {
     transition: width 0.370s, height 0.370s, border 0.370s;
 }
 
-body:hover .cursor {
-    opacity: 1;
-}
-
 /* .btnAll:hover body.cursor {
     width: 100px;
     height: 100px;
@@ -115,12 +119,25 @@ body:hover .cursor {
 } */
 
 @media (min-width: 600px) {
+    body {
+        cursor: none;
+    }
+
+    body:hover .cursor {
+        opacity: 1;
+    }
+
     .container {
         width: 400px;
     }
 
     .quote-box {
         padding: 15px;
+    }
+
+    button {
+        padding: 10px;
+        font-size: 14px;
     }
 
     .quote-box:hover .copy-btn {
